@@ -1,25 +1,24 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import {Card,CardItem} from 'native-base'
+import { Card, CardItem, Conteriner, Text } from 'native-base';
 
 
 const ContactCard= ({ name, lastName, age, phone }) => (
-  <View>
+  <Container>
       {
-          <View>
-            <Card>
-              <CardItem>
+          <Container>
+            <Card
+              <CardItem
                 <Text>{name}</Text>
-                <Text>{lastName}</Text>
-                <Text>{age}</Text>
-                <Text>{phone}</Text>
-
-              </CardItem>
-            </Card>
-          </View>
+              //  <Text>{lastName}</Text>
+              //  <Text>{age}</Text>
+              //  <Text>{phone}</Text>
+              />
+            />
+          </Container>
       }
-  </View>
+  </Container>
 );
 
  ContactCard.propTypes = {
