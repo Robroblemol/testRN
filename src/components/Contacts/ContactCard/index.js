@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 
-const ContactCard= ({name, lastName, age, phone}) => (
+const ContactCard= ({ name, lastName, age, phone }) => (
   <View>
       {
           <View>

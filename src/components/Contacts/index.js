@@ -16,8 +16,8 @@ class Contacts extends Component {
   render() {
     return (
       <View>
-        <ContactList contacts={this.state.contacts} />
         <ContactForm createContact={this.createContact} />
+        <ContactList contacts={this.state.contacts} />
       </View>
 
     )
