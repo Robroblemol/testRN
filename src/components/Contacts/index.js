@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import ContactList from './ContactList';
 import ContactForm from './ContactForm';
 
@@ -17,7 +17,9 @@ class Contacts extends Component {
     return (
       <View>
         <ContactForm createContact={this.createContact} />
-        <ContactList contacts={this.state.contacts} />
+        <ScrollView>
+          <ContactList contacts={this.state.contacts} />
+        </ScrollView>
       </View>
 
     )
