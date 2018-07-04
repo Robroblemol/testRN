@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import { Card, CardItem, Conteriner, Text, Header, Body  } from 'native-base';
+import {
+  Card,
+  CardItem,
+  Text,
+  Button,
+   } from 'native-base';
+
 
 
 const ContactCard= ({ name, lastName, age, phone }) => (
@@ -9,12 +15,15 @@ const ContactCard= ({ name, lastName, age, phone }) => (
 
   <CardItem>
     <Card>
-    <CardItem header>
-      <Text>{name}</Text>
-    </CardItem>
-        <Text>{lastName}</Text>
-        <Text>{age}</Text>
-        <Text>{phone}</Text>
+      <CardItem header>
+        <Text>{name}</Text>
+      </CardItem>
+      <Text>{lastName}</Text>
+      <Text>{age}</Text>
+      <Text>{phone}</Text>
+      <Button bordered>
+        <Text>borrar</Text>
+      </Button>
     </Card>
   </CardItem>
 
