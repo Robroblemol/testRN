@@ -8,35 +8,45 @@ import {
   Button,
    } from 'native-base';
 
+class ContactCard extends Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    lastName:PropTypes.string.isRequired,
+    age:PropTypes.string.isRequired,
+    phone:PropTypes.string.isRequired,
+    deleteContact: PropTypes.func.isRequired,
+  }
+  state = {
+    name: '',
+    lastName: '',
+    age: '',
+    phone: '',
+  }
+  deleteContact = () => {
 
+  }
+  render(){
+    return(
+      <View>
 
-const ContactCard= ({ name, lastName, age, phone }) => (
-<View>
+        <CardItem>
+          <Card>
+            <CardItem header>
+              <Text>{name}</Text>
+            </CardItem>
+            <Text>{lastName}</Text>
+            <Text>{age}</Text>
+            <Text>{phone}</Text>
+            <Button bordered>
+              <Text>borrar</Text>
+            </Button>
+          </Card>
+        </CardItem>
 
-  <CardItem>
-    <Card>
-      <CardItem header>
-        <Text>{name}</Text>
-      </CardItem>
-      <Text>{lastName}</Text>
-      <Text>{age}</Text>
-      <Text>{phone}</Text>
-      <Button bordered>
-        <Text>borrar</Text>
-      </Button>
-    </Card>
-  </CardItem>
+      </View>
 
-</View>
-
-
-);
-
- ContactCard.propTypes = {
-   name: PropTypes.string.isRequired,
-   lastName:PropTypes.string.isRequired,
-   age:PropTypes.string.isRequired,
-   phone:PropTypes.string.isRequired,
- };
+    )
+  }
+}
 
 export default ContactCard;
