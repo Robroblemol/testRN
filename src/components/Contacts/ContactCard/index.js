@@ -1,29 +1,33 @@
-import React from 'react';
-import { View, Text} from 'react-native';
+import React, { Component } from 'react';
+import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import { Card, CardItem, Conteriner } from 'native-base';
+import { Card, CardItem, Conteriner, Text, Header, Body  } from 'native-base';
 
 
 const ContactCard= ({ name, lastName, age, phone }) => (
-  <View>
-          
-          <View>
+<View>
 
-                <Text>{name}</Text>
-                <Text>{lastName}</Text>
-                <Text>{age}</Text>
-                <Text>{phone}</Text>
+  <CardItem>
+    <Card>
+    <CardItem header>
+      <Text>{name}</Text>
+    </CardItem>
+        <Text>{lastName}</Text>
+        <Text>{age}</Text>
+        <Text>{phone}</Text>
+    </Card>
+  </CardItem>
 
-          </View>
+</View>
 
-  </View>
+
 );
 
  ContactCard.propTypes = {
-   name: PropTypes.String.isRequired,
-   lastName:PropTypes.String.isRequired,
-   age:PropTypes.String.isRequired,
-   phone:PropTypes.String.isRequired,
+   name: PropTypes.string.isRequired,
+   lastName:PropTypes.string.isRequired,
+   age:PropTypes.string.isRequired,
+   phone:PropTypes.string.isRequired,
  };
 
 export default ContactCard;
